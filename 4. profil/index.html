@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Biodata diri</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		body{
+			background-color: #f4f6f9;
+			font-family:sans-serif;
+		}
+
+		.head{
+			background-color: white;
+		}
+		.card-primary.card-outline{
+			border-top: solid 3px #007bff;
+		}
+
+		img{
+			width:100%;
+		}
+		.wrp-jd{
+			background-color: #394989;
+		}
+		.cst-1{
+			color: white;
+			font-size: 3rem;
+		}
+		.cst-2{
+			color: white;
+		}
+		h6{
+			font-weight: bold;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container-fluid p-3 head">
+		<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					<h4 class="brand-text">
+						GREEGORIO
+					</h4>
+				</a>
+				<div class="align-text-left">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="#" class="nav-link">Reverse Word</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Get Value</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Concat</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+	
+      <div class="container-fluid pt-5 pb-5 wrp-jd" >
+      	<div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+           
+
+			<img src="aset/profil2.png" alt="profil">
+            		
+            	
+          </div>
+          <!-- /.col-md-6 -->
+          <div class="col-lg-8 d-flex align-items-center ">
+          		<div>
+	          		<h1  class="font-weight-bold cst-1">GREEGORIO RUY MIRA KAHO</h1>
+	          		<p class="font-weight-light  cst-2 pr-4">Menambah dan mengasah kemampuan dibidang web developer merupakan motivasi saya mengikuti pelatihan ini.</p>
+	          		<a href="https://api.whatsapp.com/send?phone=6281338987213&text=Halo%20Greegorio" target="_blank"><button type="button" class="btn btn-md btn-success">0813-3898-7213</button></a>
+          		</div>
+          		
+         </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mx-auto my-5">
+    	<div class="card card-primary card-outline">
+    		
+    		<div class="card-body">
+    			<h6>REVERSE WORLD FUNCTION</h6>
+    			<div class="row">
+    				<div class="col-md-8">
+						<label>Masukan teks</label>
+						<textarea id="rvrs" cols="30" rows="10" class="form-control"></textarea>
+
+    				</div>
+    				<div class="col-md-4 d-flex align-items-center">
+    					<div>
+    						<label>Hasil</label>
+	    					<textarea id="rvrs_hsil" cols="30" rows="10" class="form-control" disabled="disabled"></textarea>
+    					</div>
+    				</div>
+    				<div class="col-md-12">
+	    				<button id="run_reverse" class="btn btn-primary btn-sm my-2">JALANKAN</button>
+    				</div>
+    			</div>
+    			
+    		</div>
+    	</div>
+    </div>
+
+
+        <div class="container mx-auto my-5">
+    	<div class="card card-primary card-outline">
+    		
+    		<div class="card-body">
+    			<h6>GET VALUE FUNCTION</h6>
+    			<div class="row">
+    				<div class="col-md-8">
+						<label>Masukan array (contoh: 1,2,3,4, ...)</label>
+						<textarea id="gtVl_ar" cols="30" rows="10" class="form-control"></textarea>
+						<label>Masukan Nilai</label>
+						<input type="number" id="gtVl_nb"  class="form-control">
+    				</div>
+    				<div class="col-md-4 d-flex align-items-center">
+    					<div>
+    						<label>Hasil</label>
+	    					<textarea id="gtVl_hsil" cols="30" rows="11" class="form-control" disabled="disabled"></textarea>
+    					</div>
+    				</div>
+    				<div class="col-md-12">
+	    				<button id="run_gtVl" class="btn btn-primary btn-sm my-2">JALANKAN</button>
+    				</div>
+    			</div>
+    			
+    		</div>
+    	</div>
+    </div>
+
+
+        <div class="container mx-auto my-5">
+    	<div class="card card-primary card-outline">
+    		
+    		<div class="card-body">
+    			<h6 class="">CONCAT FUNCTION</h6>
+    			<div class="row">
+    				<div class="col-md-8">
+						<label>Masukan array (contoh: 1,2,3,4, ...)</label>
+						<textarea id="concat_arr" cols="30" rows="10" class="form-control"></textarea>
+
+    				</div>
+    				<div class="col-md-4 d-flex align-items-center">
+    					<div>
+    						<label>Hasil</label>
+	    					<textarea id="concat_hsil" cols="30" rows="10" class="form-control" disabled="disabled"></textarea>
+    					</div>
+    				</div>
+    				<div class="col-md-12">
+	    				<button id="run_concat" class="btn btn-primary btn-sm my-2">JALANKAN</button>
+    				</div>
+    			</div>
+    			
+    		</div>
+    	</div>
+    </div>
+
+    <script src="js/reverseWord.js"></script>
+	<script src="js/concat.js"></script>
+	<script src="js/getValue.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#run_reverse').click(function(){
+				var Reverse = $('#rvrs').val();
+				var Reverse_result = $('#rvrs_hsil');
+				Reverse_result.val(reverseWord(Reverse));
+			})
+
+			$('#run_gtVl').click(function(){
+				var gtvlAR = $('#gtVl_ar').val().split(',');
+				var gtvlNL = $('#gtVl_nb').val();
+				var gtvlHS = $('#gtVl_hsil');
+				gtvlHS.val(getValue(gtvlAR,gtvlNL));
+			})
+
+			$('#run_concat').click(function(){
+				var cn_arr = $('#concat_arr').val().split(',');
+				var cn_res = $('#concat_hsil');
+
+				cn_res.val(concat.apply(this,cn_arr));
+			})
+
+
+
+
+		})
+	</script>
+
+</body>
+</html>
